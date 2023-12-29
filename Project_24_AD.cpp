@@ -5,6 +5,7 @@ using namespace std;
 int N, T[100][100];
 const int miscari[8][2] = {{2, 1}, {1, 2}, {-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}, {1, -2}, {2, -1}};
 int countMiscari = 1;
+int start_x, start_y;
 
 void generare()
 {   
@@ -72,19 +73,38 @@ int solve(int x, int y, int movei)
     return 0;
 }
 
-/*void afisare()
+void afisare()
 {
+    pozitia(start_x,start_y);
+    T[start_x][start_y] = countMiscari++;
 
+    if (solve(start_x, start_y, 1) == 1)
+    {
+        cout << "Solutia gasita" << endl;
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                cout << T[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+    else
+    {
+        cout << "Nu exista solutie." << endl;
+    }
 }
-*/
+
 int main()
 {
-    int opt, i, j;
+    int opt;
     do{
         cout<<"-----Meniu-----"<<endl;
         cout<<"0. Iesire."<<endl;
         cout<<"1. Genenrarea de Tabla initiala."<<endl;
         cout<<"2. Alegerea de pozitie."<<endl;
+        cout<<"3. Afisare rezolvarii turului de cal."<<endl;
         cout<<"Alege optiunea: ";
         cin>>opt;
         switch (opt)
@@ -93,10 +113,14 @@ int main()
             exit(0);
             break;
         case 1:
+            countMiscari = 1;
             generare();
             break;
         case 2:
-            pozitia(i,j);
+            pozitia(start_x,start_y);
+            break;
+        case 3:
+            afisare();
             break;
         default:
             cout<<"Opiunea aleasa este gresita."<<endl;
