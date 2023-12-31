@@ -129,7 +129,7 @@ int main()
             afisare();
             break;
         default:
-            cout << "Opiunea aleasa este gresita." << endl;
+            cout << "Opitunea aleasa este gresita." << endl;
             break;
         }
     }while(opt != 0);//Meniul creat pentru generarea si afisare de cazurile date de utilizator
