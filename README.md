@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Turul Calului în Șah
 
     Acest program în C++ simulează problema Turului Calului pe o tablă de șah. Turul Calului este o problemă matematică în care obiectivul este ca calul să viziteze fiecare pătrat al tablei de șah exact o singură dată.
