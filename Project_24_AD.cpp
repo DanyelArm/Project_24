@@ -82,8 +82,6 @@ int solve(int x, int y, int movei)
 
 void afisare()
 {
-    int countMiscari = 1;//Contor de a afisa miscarea calului pe tabla
-    //T[start_x][start_y] = countMiscari++;
     if (solve(start_x, start_y, 1) == 1)//Verifica daca functia a gasit un drum pentru cal
     {
         cout << "Solutia gasita" << endl;
